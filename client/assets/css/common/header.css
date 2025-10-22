@@ -1,0 +1,53 @@
+.navbar {
+  padding: auto 0;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+  height: 50px;
+  width: auto;
+  
+}
+
+.profile-img{
+  height: 50px;
+  width: 50px;
+  clip-path: circle(50% at center);
+  object-fit: cover; 
+  object-position: center;
+}
+
+.nav-item {
+  align-content: center;
+  color: #333;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1rem;
+  transition: color 0.3s ease;
+  margin: 0 10px;
+}
+
+
+.dropdown-menu {
+  border: none;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.9rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-toggler {
+  border: none;
+  padding: 0.25rem;
+}
+
+.navbar-toggler i {
+  font-size: 2rem;
+  color: #333;
+}
+
+@media (max-width: 768px) {
+  .dropdown-menu {
+    border: none;
+    box-shadow: none;
+    padding-left: 1rem;
+  }
+}

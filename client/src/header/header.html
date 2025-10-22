@@ -1,0 +1,32 @@
+<nav class="navbar navbar-expand-md bg-white fixed-top">
+    <div class="container">
+        <a class="navbar-brand" href="../extensao/index.html">
+            <img src="../../assets/img/logo.png" alt="Logo IFsul" class="logo">
+        </a>
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-list"></i>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item" id="login-btn">
+                    <button class="btn btn-success" onclick="redirectVars()">Acessar com o SUAP</button>
+                </li>
+                <li class="nav-item dropdown d-none" id="actions">
+                    <a class="btn btn-success" href="../form/form.html">Adicionar
+                        Projeto
+                    </a>
+
+                </li>
+                </li>
+                <li id="user-name" class="nav-item d-none"></li>
+                <li class="nav-item d-none">
+                    <img id="user-image" class="profile-img">
+                    <button class="btn btn-outline-danger" onclick="removeToken()">Sair</button>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>

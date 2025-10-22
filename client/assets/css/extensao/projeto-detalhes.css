@@ -1,0 +1,177 @@
+.loading-spinner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 400px;
+}
+
+.projeto-header {
+    margin-bottom: 2rem;
+    position: relative;
+}
+
+.projeto-content {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.projeto-titulo {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 2.5rem;
+    color: #2c3e50;
+    margin-bottom: 1rem;
+}
+
+.projeto-meta {
+    display: flex;
+    gap: 2rem;
+    margin-bottom: 2rem;
+    font-size: 1.1rem;
+    color: #666;
+}
+
+.meta-item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.meta-item i {
+    font-size: 1.2rem;
+    color: #28a745;
+}
+
+.projeto-capa {
+    width: 100%;
+    max-height: 500px;
+    object-fit: cover;
+    margin-bottom: 3rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.projeto-descricao {
+    margin-bottom: 3rem;
+}
+
+.projeto-descricao h2,
+.projeto-galeria h2,
+.projeto-membros h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 2rem;
+    color: #2c3e50;
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 3px solid #28a745;
+}
+
+.projeto-descricao p {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #555;
+    text-align: justify;
+}
+
+.projeto-galeria {
+    margin-bottom: 3rem;
+}
+
+.galeria-foto {
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.galeria-foto:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.projeto-membros {
+    margin-bottom: 3rem;
+}
+
+.membro-card {
+    border: none;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.membro-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.membro-foto {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border: 3px solid #28a745;
+}
+
+.membro-card .card-title {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    color: #2c3e50;
+    margin-bottom: 0.5rem;
+}
+
+.membro-card .card-text {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 0.95rem;
+}
+
+.projeto-participacao {
+    margin-bottom: 3rem;
+}
+
+.projeto-participacao h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 2rem;
+    color: #2c3e50;
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 3px solid #28a745;
+}
+
+.projeto-participacao .card {
+    border: none;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.projeto-participacao .form-label {
+    font-weight: 600;
+    color: #2c3e50;
+}
+
+.projeto-participacao .alert-info {
+    background-color: #e7f3ff;
+    border-color: #b3d9ff;
+    color: #004085;
+}
+
+.badge {
+    font-size: 0.85rem;
+    padding: 0.4rem 0.8rem;
+}
+
+@media (max-width: 768px) {
+    .projeto-titulo {
+        font-size: 2rem;
+    }
+
+    .projeto-meta {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    .projeto-descricao h2,
+    .projeto-galeria h2,
+    .projeto-membros h2,
+    .projeto-participacao h2 {
+        font-size: 1.5rem;
+    }
+}

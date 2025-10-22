@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" href="https://localhost:3000/uploads/favicon.ico" />
+  <title>Projetos de extensão</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Open+Sans&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="../../assets/css/common/header.css" />
+  <link rel="stylesheet" href="../../assets/css/common/footer.css" />
+</head>
+
+<body>
+  <!-- CABEÇALHO -->
+  <div id="header-placeholder"></div>
+  <script>
+    fetch("../header/header.html")
+      .then((response) => response.text())
+      .then((data) => {
+        document.getElementById("header-placeholder").innerHTML = data;
+      });
+  </script>
+
+  <main class="container py-5 mt-5">
+    <h1 class="mb-4">Novo Projeto de Extensão</h1>
+    <form id="project-form">
+      <div class="mb-3">
+        <label for="titulo" class="form-label">Título do Projeto</label>
+        <input type="text" class="form-control" name="titulo" id="titulo" placeholder="Nome do projeto" required />
+      </div>
+
+      <div class="mb-3">
+        <label for="data" class="form-label">Data</label>
+        <input type="date" class="form-control" id="data" name="data"/>
+      </div>
+
+      <div class="mb-3">
+        <label for="capa" class="form-label">Imagem da Capa</label>
+        <input type="file" class="form-control" name="capa" id="capa" accept="image/*" required />
+      </div>
+
+      <div class="mb-3">
+        <label for="cursos" class="form-label">Cursos relacionados</label><br>
+        <div id="cursos">
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="checkbox" name="cursos" value="BCC" id="cursoBCC">
+            <label class="form-check-label" for="cursoBCC">BCC</label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="checkbox" name="cursos" value="EC" id="cursoEC">
+            <label class="form-check-label" for="cursoEC">EC</label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="checkbox" name="cursos" value="EM" id="cursoEM">
+            <label class="form-check-label" for="cursoEM">EM</label>
+          </div>
+        </div>
+      </div>
+      
+      <div class="mb-3">
+        <label for="descricao" class="form-label">Descrição</label>
+        <textarea class="form-control" name="descricao" id="descricao" rows="4" placeholder="Insira o objetivo do projeto, os métodos, o local e outras informações relevantes de maneira breve"></textarea>
+      </div>
+
+      <hr />
+      <h3>Galeria de Fotos</h3>
+      <div class="mb-3">
+        <label for="galeria" class="form-label">Fotos do Projeto (Opcional)</label>
+        <input type="file" class="form-control" name="galeria" id="galeria" accept="image/*" multiple />
+        <small class="form-text text-muted">Selecione uma ou mais fotos para a galeria do projeto</small>
+      </div>
+
+      <hr />
+      <h3>Membros</h3>
+      <div id="membros-container"></div>
+      <button type="button" class="btn btn-outline-primary my-3" onclick="addMembro()">Adicionar Membro</button>
+
+      <button type="submit" class="btn btn-success">Enviar Projeto</button>
+    </form>
+  </main>
+
+  <!-- RODAPÉ -->
+  <div id="footer-placeholder"></div>
+  <script>
+    fetch("../footer/footer.html")
+      .then((response) => response.text())
+      .then((data) => {
+        document.getElementById("footer-placeholder").innerHTML = data;
+      });
+  </script>
+  <script src="../config.js"></script> 
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"></script>
+  <script src="../header/authSuap.js"></script>
+  <script src="./formScript.js"></script>
+</body>
+
+</html>

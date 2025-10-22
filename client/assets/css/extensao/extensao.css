@@ -1,0 +1,457 @@
+:root {
+    --verde1: rgb(53, 152, 48);
+    --verde2: rgb(44, 68, 32);
+    --vermelho1: rgb(201, 12, 15);
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    font-family: 'Open Sans', sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.section-subtitle {
+    color: var(--verde1);
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    display: block;
+}
+
+.desc-icon {
+    margin-right: 7px;
+}
+
+.section-title {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    color: var(--verde1);
+}
+
+.btn-primary,
+.btn-secondary {
+    display: inline-block;
+    padding: 0.8rem 2rem;
+    background-color: var(--verde2);
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    transition: background-color 0.3s ease;
+    margin-top: 1rem;
+    border: none;
+}
+
+.btn-primary:hover,
+.btn-secondary:hover {
+    background-color: var(--verde1);
+    color: white;
+}
+
+.main {
+    margin-top: 76px;
+    min-height: 30vh;
+    width: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.main::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.main-content {
+    position: relative;
+    z-index: 1;
+    color: white;
+    padding: 2rem 0;
+    width: 50%;
+}
+
+.main-content h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.main-content p {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+}
+
+.schedule-section {
+    padding: 4rem 0;
+    background-color: #f8f9fa;
+}
+
+.month-selector {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.month-title {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2rem;
+    color: var(--verde1);
+    margin-bottom: 1.5rem;
+}
+
+.days-list {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.day-button {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 2px solid var(--verde1);
+    background: none;
+    color: var(--verde1);
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.day-button.active,
+.day-button:hover {
+    background-color: var(--verde1);
+    color: white;
+}
+
+.events-list {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.event-card {
+    background: white;
+    border-radius: 10px;
+    padding: 2rem;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.event-title {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.5rem;
+    color: var(--verde1);
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+}
+
+.event-time,
+.event-courses,
+.event-date {
+
+    align-items: flex-end;
+    gap: 0.5rem;
+    color: #666;
+    margin-bottom: 0.5rem;
+}
+
+
+
+.carousel.inner {
+    display: flex;
+}
+
+.custom-crsl-btn {
+    color: var(--verde1);
+}
+
+.custom-crsl-btn.left {
+    transform: translateX(-50%);
+}
+
+.custom-crsl-btn:hover,
+.custom-crsl-btn:focus,
+.custom-crsl-btn:active {
+    color: var(--verde2);
+}
+
+.speakers-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: auto; /* Continua empurrando para baixo */
+    width: 100%; /* Garante que ocupe toda a largura */
+
+}
+
+.speaker {
+    display: flex;
+    flex-direction: row; /* imagem em cima, texto embaixo */
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin: 0 auto;
+    gap: 2rem;
+    /* padding: 0.5rem; */
+    padding: 12px 55px;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+}
+
+
+
+
+.speaker:hover {
+    background-color:rgba(53, 152, 48, 0.082);
+}
+
+.speaker-image {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid var(--verde1);
+}
+
+.speaker-info {
+    flex: 1;
+}
+
+.speaker-info p {
+    color: #666;
+    margin: 0;
+    font-size: 0.9rem;
+}
+
+.speaker-info h4 {
+    font-family: 'Montserrat', sans-serif;
+    color: var(--verde1);
+    margin: 0;
+    font-size: 1rem;
+}
+
+.btn-primary {
+    margin-top: 1rem;
+    display: inline-block;
+}
+
+:root {
+    --color-bg1: rgb(25, 108, 0);
+    --color-bg2: rgb(8, 78, 0);
+    --color1: 18, 113, 0;
+    --color2: 221, 74, 0;
+    --color3: 100, 220, 0;
+    --color4: 200, 50, 50;
+    --color5: 180, 180, 50;
+    --color-interactive: 140, 200, 0;
+    --circle-size: 80%;
+    --blending: hard-light;
+}
+
+.gradient-bg {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(40deg, var(--color-bg1), var(--color-bg2));
+}
+
+.gradient-bg svg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 0;
+}
+
+.gradient-bg .gradients-container {
+    filter: url(#goo) blur(40px);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.gradient-bg .g1,
+.gradient-bg .g2,
+.gradient-bg .g3,
+.gradient-bg .g4,
+.gradient-bg .g5 {
+    position: absolute;
+    background-repeat: no-repeat;
+    mix-blend-mode: var(--blending);
+}
+
+.gradient-bg .g1 {
+    background: radial-gradient(circle at center, rgba(var(--color1), 0.8) 0, rgba(var(--color1), 0) 50%);
+    width: var(--circle-size);
+    height: var(--circle-size);
+    top: calc(50% - var(--circle-size) / 2);
+    left: calc(50% - var(--circle-size) / 2);
+    transform-origin: center center;
+    animation: moveVertical 30s ease infinite;
+    opacity: 1;
+}
+
+.gradient-bg .g2 {
+    background: radial-gradient(circle at center, rgba(var(--color2), 0.8) 0, rgba(var(--color2), 0) 50%);
+    width: var(--circle-size);
+    height: var(--circle-size);
+    top: calc(50% - var(--circle-size) / 2);
+    left: calc(50% - var(--circle-size) / 2);
+    transform-origin: calc(50% - 400px);
+    animation: moveInCircle 20s reverse infinite;
+    opacity: 1;
+}
+
+.gradient-bg .g3 {
+    background: radial-gradient(circle at center, rgba(var(--color3), 0.8) 0, rgba(var(--color3), 0) 50%);
+    width: var(--circle-size);
+    height: var(--circle-size);
+    top: calc(50% - var(--circle-size) / 2 + 200px);
+    left: calc(50% - var(--circle-size) / 2 - 500px);
+    transform-origin: calc(50% + 400px);
+    animation: moveInCircle 40s linear infinite;
+    opacity: 1;
+}
+
+.gradient-bg .g4 {
+    background: radial-gradient(circle at center, rgba(var(--color4), 0.8) 0, rgba(var(--color4), 0) 50%);
+    width: var(--circle-size);
+    height: var(--circle-size);
+    top: calc(50% - var(--circle-size) / 2);
+    left: calc(50% - var(--circle-size) / 2);
+    transform-origin: calc(50% - 200px);
+    animation: moveHorizontal 40s ease infinite;
+    opacity: 0.7;
+}
+
+.gradient-bg .g5 {
+    background: radial-gradient(circle at center, rgba(var(--color5), 0.8) 0, rgba(var(--color5), 0) 50%);
+    width: calc(var(--circle-size) * 2);
+    height: calc(var(--circle-size) * 2);
+    top: calc(50% - var(--circle-size));
+    left: calc(50% - var(--circle-size));
+    transform-origin: calc(50% - 800px) calc(50% + 200px);
+    animation: moveInCircle 20s ease infinite;
+    opacity: 1;
+}
+
+.gradient-bg .interactive {
+    position: absolute;
+    background: radial-gradient(circle at center, rgba(var(--color-interactive), 0.8) 0, rgba(var(--color-interactive), 0) 50%);
+    mix-blend-mode: var(--blending);
+    width: 100%;
+    height: 100%;
+    top: -50%;
+    left: -50%;
+    opacity: 0.7;
+}
+
+@keyframes moveInCircle {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    50% {
+        transform: rotate(180deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes moveVertical {
+    0% {
+        transform: translateY(-50%);
+    }
+
+    50% {
+        transform: translateY(50%);
+    }
+
+    100% {
+        transform: translateY(-50%);
+    }
+}
+
+@keyframes moveHorizontal {
+    0% {
+        transform: translateX(-50%) translateY(-10%);
+    }
+
+    50% {
+        transform: translateX(50%) translateY(10%);
+    }
+
+    100% {
+        transform: translateX(-50%) translateY(-10%);
+    }
+}
+
+@media (max-width: 768px) {
+
+    .main-content {
+        width: 100%;
+    }
+
+    .main-content h1 {
+        font-size: 2rem;
+    }
+
+    .main-content p {
+        font-size: 1rem;
+    }
+
+    .btn-primary {
+        padding: 0.6rem 1.5rem;
+    }
+
+    .section-title {
+        font-size: 2rem;
+    }
+
+    .features-center {
+        order: -1;
+        margin-bottom: 2rem;
+    }
+
+    .events-list {
+        padding: 0 1rem;
+    }
+
+    .event-card {
+        padding: 1.5rem;
+    }
+
+    
+}
+
+.schedule-wrapper {
+    display: flex;
+    align-items: bttom;
+    justify-content: center;
+    gap: 20vh;
+}
